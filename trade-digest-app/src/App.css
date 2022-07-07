@@ -1,38 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* font-family:'' */
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  border: 1px solid black;
+  width: 429px;
+  height: 7000px;
+  margin: auto;
+  margin-top: 50px;
+  overflow: scroll;
+  /* background-color: #F5F5F5; */
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+}
+.App-logo{
+  flex: 1;
+}
+#date {
+  font-size: 14px;
+  color: #8B97A4;
+}
+
+#greeting {
+  margin: 16px 0 26px 16px;
+  font-size: 28px;
+  font-weight: bold;
+  /* border: 1px solid red; */
+  /* font-family:'Mosaic Sharp Semi Slab' ; */
+}
+
+.notifs {
+  margin: 18px 18px 32px;
+  background-color: white; 
+  border-radius: 15px; 
+  /* box-shadow:black; */
+  
+}
+
+#notif-header {
+  padding: 10px 32px;
+  background-color: #FC1E68;
+  border-radius: 15px 15px 0 0;
+  color: white;
+  font-weight:bold;
+  font-size: 20px;
+}
+
+.notif-item {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+.notif-item-text {
+  padding-left: 17px;
+  flex: 1;
+}
+
+.notif-item > .bullet {
+  background-color: #FF2D55;
+  padding: 7px;
+  border-radius: 50%;
+  height:0;
+  width: 0;
+}
+.notif-name {
+  font-size: 16px;
+  color: #04203E;
+  font-weight: bold;
+}
+.notif-details, .notif-timestamp {
+  color: #8A96A3;
+  font-size: 14px;
+}
+
+#punch-item-link{
+  border: 1px solid black;
+  width: 0;
+  height: 0;
+  padding: 5px;
+}
+
+.report-header > .divider{
+  height: 2px;
+}
+.report-header-title {
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #04203E;
+  font-weight: 700;
+}
+
+.upp-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position:relative;
+}
+.punch-item-box {
+  margin: 8px 18px;
+  background-color: white; 
+}
+#circle-progress {
+  padding: 20px;
+  color: #27364F;
+  border-radius: 10px;
+}
+.inner-progress-text {
+  position: absolute;
+  /* top:50px; */
+  /* right: 50px; */
+  display:flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  top: 100px;
+  width: 100%;
+  /* text-align: center; */
+
 }
 
-.App-link {
-  color: #61dafb;
+#countdown-text {
+  font-size: 32px;
+  color: #FC1E68;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#countdown-helper {
+  color: #747F8F;
+  font-size: 12px;
+}
+
+#punch-items-text {
+  color: #04203E;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.punch-items-wrapper {
+  padding: 15px 0 30px;
+}
+
+.work-tabs {
+  background-color: #FBF9F6;
+}
+
+.tab {
+  color: #8D95A2;
+  font-weight: 333;
+  font-size: 6px;
+}
+
+.wov-button-wrapper {
+  display: flex;
+  padding: 8px 0;
+  width: 100%;
+  align-items: center;
+}
+.wov-button-loc {
+  padding: 0 0 0 30px;
+}
+.wov-button-id {
+  padding: 0 30px 0 0;
+}
+
+.subdivider {
+  background-color: #DBDDE1;
+  height: 1px;
+  margin:  0 18px 0 18px;
+}
+.divider {
+  background-color: #DBDDE1;
+  height:1px;
 }
