@@ -19,6 +19,9 @@ import {
   AccordionPanel,
   AccordionIcon,
   Tag,
+  Stack,
+  Spacer,
+  VStack,
 } from "@chakra-ui/react";
 
 function App() {
@@ -100,6 +103,43 @@ function App() {
       </>
     );
   };
+  const CustomAccordionButton = ({ id, loc }) => {
+    return (
+      <h2>
+        <AccordionButton fontSize="14px">
+          <WOVButton id={id} loc={loc} />
+        </AccordionButton>
+      </h2>
+    );
+  };
+  const WOVPanel = ({ title, plan, item, elevation }) => {
+    return (
+      <>
+        <div className="wov-panel-wrapper">
+          <p id="title">{title}</p>
+          <p id="plan">{plan}</p>
+        </div>
+        <div className="wov-panel-wrapper">
+          <p id="item">{item}</p>
+          <p id="elevation">{elevation}</p>
+        </div>
+      </>
+    );
+  };
+  const CustomAccordionPanel = ({ title, plan, item, elevation }) => {
+    return (
+      <AccordionPanel
+        bg="#F2F0ED"
+        css={{
+          margin: 0,
+          padding: "5px 20px",
+          borderTop: "1px solid #DBDDE1",
+        }}
+      >
+        <WOVPanel title={title} plan={plan} item={item} elevation={elevation} />
+      </AccordionPanel>
+    );
+  };
   return (
     <ChakraProvider>
       <div className="App">
@@ -166,59 +206,55 @@ function App() {
 
           <TabPanels>
             <TabPanel css={{ margin: 0, padding: 0 }}>
-              <Accordion allowToggle>
+              <Accordion allowMultiple>
                 <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <WOVButton id="KER:201986" loc="Jasper 1C | Lot 5" />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </AccordionPanel>
+                  <CustomAccordionButton
+                    id="KER:201986"
+                    loc="Jasper 1C | Lot 5"
+                  />
+                  <CustomAccordionPanel
+                    title="Draw 1 - Material"
+                    plan="Plan 5-Plex"
+                    item="Item/Notes"
+                    elevation="Elevation:-"
+                  />
                 </AccordionItem>
 
                 <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <WOVButton id="KER:201987" loc="Jasper 1C | Lot 5" />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </AccordionPanel>
+                  <CustomAccordionButton
+                    id="KER:201987"
+                    loc="Jasper 1C | Lot 5"
+                  />
+                  <CustomAccordionPanel
+                    title="Draw 2 - Labor"
+                    plan="Plan 5-Plex"
+                    item="Item/Notes"
+                    elevation="Elevation:-"
+                  />
                 </AccordionItem>
                 <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <WOVButton id="KER:201988" loc="Jasper 1C | Lot 5" />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </AccordionPanel>
+                  <CustomAccordionButton
+                    id="KER:201988"
+                    loc="Jasper 1C | Lot 5"
+                  />
+                  <CustomAccordionPanel
+                    title="Draw 1 - Material"
+                    plan="Plan 5-Plex"
+                    item="Item/Notes"
+                    elevation="Elevation:-"
+                  />
                 </AccordionItem>
                 <AccordionItem>
-                  <h2>
-                    <AccordionButton>
-                      <WOVButton id="KER:201989" loc="Jasper 1C | Lot 5" />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </AccordionPanel>
+                  <CustomAccordionButton
+                    id="KER:201989"
+                    loc="Jasper 1C | Lot 5"
+                  />
+                  <CustomAccordionPanel
+                    title="Draw 2 - Labor"
+                    plan="Plan 5-Plex"
+                    item="Item/Notes"
+                    elevation="Elevation:-"
+                  />
                 </AccordionItem>
               </Accordion>
             </TabPanel>

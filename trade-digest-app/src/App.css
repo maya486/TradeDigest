@@ -167,11 +167,28 @@
   align-items: center;
 }
 .wov-button-loc {
-  padding: 0 0 0 30px;
+  padding: 0 0 0 50px;
 }
 .wov-button-id {
-  padding: 0 30px 0 0;
+  padding: 0 50px 0 0;
 }
+.wov-panel-wrapper {
+  display: flex;
+  font-size: 14px;
+  color: #3E4C63;
+  font-weight:333;
+  /* border: 1px solid red; */
+  padding: 5px;
+  /* background-color: #F2F0ED; */
+}
+#title {
+  font-weight: 571;
+}
+
+#title, #item{
+  flex: 1;
+}
+
 
 .subdivider {
   background-color: #DBDDE1;
