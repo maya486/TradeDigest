@@ -131,19 +131,26 @@ function App() {
       <>
         <div className="wov-button-wrapper">
           <Text className="wov-button-id">{id}</Text>
+          <Text className="wov-button-loc">{loc}</Text>
           {isPaid ? (
-            <Tag borderRadius="none" bg="#DFF1EC" color="#2E5045">
+            <Tag
+              className="wov-tag"
+              borderRadius="none"
+              bg="#DFF1EC"
+              color="#2E5045"
+            >
               Paid
             </Tag>
           ) : (
-            <Tag borderRadius="none" bg="#F5F4FA" color="#27364F">
+            <Tag
+              className="wov-tag"
+              borderRadius="none"
+              bg="#F5F4FA"
+              color="#27364F"
+            >
               Open
             </Tag>
           )}
-          {/* <Tag borderRadius="none" bg="#F5F4FA">
-            Open
-          </Tag> */}
-          <Text className="wov-button-loc">{loc}</Text>
           <></>
         </div>
         <AccordionIcon />
@@ -292,7 +299,7 @@ function App() {
       <Accordion allowMultiple>
         <AccordionItem>
           <CustomAccordionButton
-            id={wv_arr[0] === 1 ? "KER:WO:201986" : "KER:VPO:201986"}
+            id={wv_arr[0] === 1 ? "WO:201986" : "VPO:201986"}
             // id="KER:201986"
             loc="Jasper 1C | Lot 5"
             isPaid={isPaid}
@@ -305,7 +312,7 @@ function App() {
         </AccordionItem>
         <AccordionItem>
           <CustomAccordionButton
-            id={wv_arr[1] === 1 ? "KER:WO:201987" : "KER:VPO:201987"}
+            id={wv_arr[1] === 1 ? "WO:201987" : "VPO:201987"}
             loc="Jasper 1C | Lot 5"
             isPaid={isPaid}
           />
@@ -317,7 +324,7 @@ function App() {
         </AccordionItem>
         <AccordionItem>
           <CustomAccordionButton
-            id={wv_arr[2] === 1 ? "KER:WO:201988" : "KER:VPO:201988"}
+            id={wv_arr[2] === 1 ? "WO:201988" : "VPO:201988"}
             loc="Jasper 1C | Lot 5"
             isPaid={isPaid}
           />
@@ -329,7 +336,7 @@ function App() {
         </AccordionItem>
         <AccordionItem>
           <CustomAccordionButton
-            id={wv_arr[3] === 1 ? "KER:WO:201989" : "KER:VPO:201989"}
+            id={wv_arr[3] === 1 ? "WO:201989" : "VPO:201989"}
             loc="Jasper 1C | Lot 5"
             isPaid={isPaid}
           />
@@ -347,7 +354,7 @@ function App() {
       <div className="start-letter-wrapper">
         <Text id="start-letter-loc">{loc}</Text>
         <Text id="start-letter-date">Last Updated: {date}</Text>
-        <LinkBox className="punch-item-link">
+        <LinkBox className="start-letter-link">
           <LinkOverlay href={href} />
           <Icon as={FiExternalLink} w="17px" h="17px" />
         </LinkBox>
@@ -401,14 +408,14 @@ function App() {
           <CustomDivider />
           <NotifItem
             name="Work order has been updated"
-            loc="KER:00264 | Jasper 1C | Lot 72"
-            details="Added contract adjustment for 3/21/22 increase"
+            loc="KER:442802 | Jasper 1C | Lot 331"
+            details="Work order update note"
             icon_type="warning"
           />
           <CustomDivider />
           <NotifItem
             name="Work order has been approved"
-            loc="KER:00264 | Jasper 1C | Lot 72"
+            loc="KER:442078 | Jasper 1C | Lot 331"
             details="Approved by Cletus Caroland"
             icon_type="success"
           />
@@ -423,7 +430,7 @@ function App() {
             color="#FC1E68"
           />
           <div className="inner-progress-text">
-            <Text id="countdown-text">4 Days</Text>
+            <Text id="countdown-text">12 Days</Text>
             <Text id="countdown-helper">Until Next Pay Run</Text>
           </div>
         </div>
@@ -434,15 +441,15 @@ function App() {
         <div className="punch-items-wrapper">
           <Box className="punch-item-box" boxShadow={"lg"}>
             <PunchItem
-              name="Inspect footing for cracks"
-              details="Jasper 1C | Lot 5"
+              name="Master shower head in wrong..."
+              details="Jasper 1C | Lot 355"
               href="#"
             />
           </Box>
           <Box className="punch-item-box" boxShadow={"lg"}>
             <PunchItem
-              name="Framing inspection failed, fix some anchor bolts"
-              details="Jasper 1C | Lot 5"
+              name="Portal framing straps in detail needs..."
+              details="Jasper 1C | Lot 349"
               href="#"
             />
           </Box>
@@ -454,29 +461,24 @@ function App() {
             <div id="timeline-line" />
           </div>
           <div className="timeline-wrapper">
-            <TimelineNode isRed={true} text="June 6, 2022" />
+            <TimelineNode isRed={true} text="Jul 18, 2022" />
             <TimelineItem
-              loc="Jasper 1C | Lot 5"
-              dates="Mon - Wed"
-              name="Framing Crane"
+              loc="Jasper 1C | Lot 319"
+              dates="Thu"
+              name="Framing Pick up"
             />
             <TimelineItem
-              loc="Jasper 1C | Lot 5"
-              dates="Mon - Fri"
-              name="Framing Sliding"
+              loc="Jasper 1C | Lot 355"
+              dates="Wed - Thu"
+              name="Framing Pick up"
             />
-            <TimelineNode text="June 13, 2022" />
+            <TimelineNode text="Jul 25, 2022" />
             <TimelineItem
-              loc="Jasper 1C | Lot 6"
-              dates="Mon - Wed"
-              name="Framing Crane"
+              loc="Jasper 1C | Lot 316"
+              dates="Tue"
+              name="Framing Pick up"
             />
-            <TimelineItem
-              loc="Jasper 1C | Lot 7"
-              dates="Thu - Fri"
-              name="Framing Crane"
-            />
-            <TimelineNode text="June 20, 2022" />
+            <TimelineNode text="Aug 1, 2022" />
           </div>
         </div>
         <ReportHeader text="Scope of Work" />
@@ -496,20 +498,132 @@ function App() {
                 overflow: "scroll",
               }}
             >
-              <StartLetter loc="Jasper 1C | Lot 5" date="07/07/2022" href="#" />
-              <StartLetter loc="Jasper 1C | Lot 6" date="07/07/2022" href="#" />
-              <StartLetter loc="Jasper 1C | Lot 7" date="07/07/2022" href="#" />
-              <StartLetter loc="Jasper 1C | Lot 8" date="07/07/2022" href="#" />
-              <StartLetter loc="Jasper 1C | Lot 9" date="07/07/2022" href="#" />
+              <StartLetter
+                loc="Jasper 1C | Lot 319"
+                date="10/12/2021"
+                href="#"
+              />
+              <StartLetter
+                loc="Jasper 1C | Lot 355"
+                date="09/21/2021"
+                href="#"
+              />
             </TabPanel>
             <TabPanel css={{ margin: 0, padding: 0 }}>
-              <DemoAccordion isWO={true} wv_arr={[1, 1, 1, 1]} />
+              <Accordion allowMultiple>
+                <AccordionItem>
+                  <CustomAccordionButton
+                    id="WO:441566"
+                    loc="Jasper 1C | Lot 317"
+                    isPaid={false}
+                  />
+                  <CustomAccordionPanel
+                    plan="3020"
+                    item_list={["Framing Labor - Framing Labor"]}
+                    elevation="A"
+                  />
+                </AccordionItem>
+                <AccordionItem>
+                  <CustomAccordionButton
+                    id="WO:441572"
+                    loc="Jasper 1C | Lot 317"
+                    isPaid={false}
+                  />
+                  <CustomAccordionPanel
+                    plan="3020"
+                    item_list={["Framing Labor - Siding Labor"]}
+                    elevation="A"
+                  />
+                </AccordionItem>
+                <AccordionItem>
+                  <CustomAccordionButton
+                    id="WO:442801"
+                    loc="Jasper 1C | Lot 321"
+                    isPaid={false}
+                  />
+                  <CustomAccordionPanel
+                    plan="3020"
+                    item_list={["Framing Labor - Framing Labor"]}
+                    elevation="A"
+                  />
+                </AccordionItem>
+                <AccordionItem>
+                  <CustomAccordionButton
+                    id="WO:442078"
+                    loc="Jasper 1C | Lot 331"
+                    isPaid={false}
+                  />
+                  <CustomAccordionPanel
+                    plan="2672"
+                    item_list={[
+                      "Framing Labor - Framing Labor",
+                      "Framing Labor - Framing Labor",
+                      "Framing Labor - Framing Labor",
+                    ]}
+                    elevation="A"
+                  />
+                </AccordionItem>
+                <AccordionItem>
+                  <CustomAccordionButton
+                    id="WO:442802"
+                    loc="Jasper 1C | Lot 331"
+                    isPaid={false}
+                  />
+                  <CustomAccordionPanel
+                    plan="2672"
+                    item_list={["Framing Labor - Siding Labor"]}
+                    elevation="A"
+                  />
+                </AccordionItem>
+              </Accordion>
             </TabPanel>
             <TabPanel css={{ margin: 0, padding: 0 }}>
-              <DemoAccordion isWO={false} wv_arr={[0, 0, 0, 0]} />
+              <Accordion allowMultiple>
+                <AccordionItem>
+                  <CustomAccordionButton
+                    id="VPO:442947"
+                    loc="Jasper 1C | Lot 321"
+                    isPaid={false}
+                  />
+                  <CustomAccordionPanel
+                    plan="3020"
+                    item_list={["Framing Materials - Framing Material"]}
+                    elevation="A"
+                  />
+                </AccordionItem>
+                <AccordionItem>
+                  <CustomAccordionButton
+                    id="VPO:442948"
+                    loc="Jasper 1C | Lot 321"
+                    isPaid={false}
+                  />
+                  <CustomAccordionPanel
+                    plan="3020"
+                    item_list={["Framing Materials - Siding Material"]}
+                    elevation="A"
+                  />
+                </AccordionItem>
+              </Accordion>
             </TabPanel>
             <TabPanel css={{ margin: 0, padding: 0 }}>
-              <DemoAccordion isPaid={true} wv_arr={[1, 0, 1, 0]} />
+              <Accordion allowMultiple>
+                <AccordionItem>
+                  <CustomAccordionButton
+                    id="WO:442078"
+                    loc="Jasper 1C | Lot 331"
+                    isPaid={true}
+                  />
+                  <CustomAccordionPanel
+                    plan="2672"
+                    item_list={[
+                      "Framing Labor - Framing Labor",
+                      "Framing Labor - Framing Labor",
+                      "Framing Labor - Framing Labor",
+                    ]}
+                    elevation="A"
+                  />
+                </AccordionItem>
+              </Accordion>
             </TabPanel>
           </TabPanels>
         </Tabs>
