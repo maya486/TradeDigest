@@ -638,50 +638,26 @@ function App() {
               <Accordion allowMultiple>
                 <AccordionItem>
                   <CustomMTAccordionButton
-                    date="June 7, 2022"
-                    info="1/2-in Plywood for headers"
-                  />
-                  <CustomMTAccordionPanel
-                    code="FM4505"
-                    quantity="2500"
-                    id="524917889015W4"
-                    lots="5, 6, 7, 8"
-                  />
-                </AccordionItem>
-                <AccordionItem>
-                  <CustomMTAccordionButton
-                    date="June 7, 2022"
+                    date="Jul 10, 2022"
                     info="16d framing nails"
                   />
                   <CustomMTAccordionPanel
                     code="FM4505"
                     quantity="2500"
                     id="524917889015W4"
-                    lots="5, 6, 7, 8"
+                    lots="319, 331"
                   />
                 </AccordionItem>
                 <AccordionItem>
                   <CustomMTAccordionButton
-                    date="June 7, 2022"
+                    date="Jul 10, 2022"
                     info="8d framing nails"
                   />
                   <CustomMTAccordionPanel
                     code="FM4505"
                     quantity="2500"
                     id="524917889015W4"
-                    lots="5, 6, 7, 8"
-                  />
-                </AccordionItem>
-                <AccordionItem>
-                  <CustomMTAccordionButton
-                    date="May 29, 2022"
-                    info="2 x 6 studs"
-                  />
-                  <CustomMTAccordionPanel
-                    code="FM4505"
-                    quantity="2500"
-                    id="524917889015W4"
-                    lots="5, 6, 7, 8"
+                    lots="319, 331"
                   />
                 </AccordionItem>
               </Accordion>
@@ -690,7 +666,7 @@ function App() {
               <Accordion allowMultiple>
                 <AccordionItem>
                   <CustomMTAccordionButton
-                    date="June 7, 2022"
+                    date="Jul 19, 2022"
                     info="1/2-in Plywood for headers"
                     icon_type="on-the-way"
                   />
@@ -698,38 +674,12 @@ function App() {
                     code="FM4505"
                     quantity="2500"
                     id="524917889015W4"
-                    lots="5, 6, 7, 8"
+                    lots="319, 331"
                   />
                 </AccordionItem>
                 <AccordionItem>
                   <CustomMTAccordionButton
-                    date="June 7, 2022"
-                    info="16d framing nails"
-                    icon_type="delayed"
-                  />
-                  <CustomMTAccordionPanel
-                    code="FM4505"
-                    quantity="2500"
-                    id="524917889015W4"
-                    lots="5, 6, 7, 8"
-                  />
-                </AccordionItem>
-                <AccordionItem>
-                  <CustomMTAccordionButton
-                    date="June 7, 2022"
-                    info="8d framing nails"
-                    icon_type="order-placed"
-                  />
-                  <CustomMTAccordionPanel
-                    code="FM4505"
-                    quantity="2500"
-                    id="524917889015W4"
-                    lots="5, 6, 7, 8"
-                  />
-                </AccordionItem>
-                <AccordionItem>
-                  <CustomMTAccordionButton
-                    date="May 29, 2022"
+                    date="Jul 19, 2022"
                     info="2 x 6 studs"
                     icon_type="order-placed"
                   />
@@ -737,7 +687,20 @@ function App() {
                     code="FM4505"
                     quantity="2500"
                     id="524917889015W4"
-                    lots="5, 6, 7, 8"
+                    lots="319, 331"
+                  />
+                </AccordionItem>
+                <AccordionItem>
+                  <CustomMTAccordionButton
+                    date="June 7, 2022"
+                    info="20d framing nails"
+                    icon_type="delayed"
+                  />
+                  <CustomMTAccordionPanel
+                    code="FM4505"
+                    quantity="2500"
+                    id="524917889015W4"
+                    lots="319, 331"
                   />
                 </AccordionItem>
               </Accordion>
