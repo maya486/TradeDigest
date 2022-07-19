@@ -227,9 +227,9 @@ function App() {
         <div className="mt-panel-wrapper">
           <div className="mt-panel-names">
             <p>Tracking ID: </p>
-            {isDelivered ? <p>Delivered On</p> : <p>Est. Delivery Date:</p>}
+            {isDelivered ? <p>Delivered On:</p> : <p>Est. Delivery Date:</p>}
             <p id="code">Item Code:</p>
-            <p id="quantity">Qty: {quantity}</p>
+            <p id="quantity">Qty: </p>
             <p>For Lot: </p>
           </div>
           <div className="mt-panel-info">
