@@ -40,7 +40,7 @@ import {
 import { CheckIcon } from "@chakra-ui/icons";
 
 function App() {
-  const date = "Fri Jun 10, 2022";
+  const date = "Mon Jul 18, 2022";
   const name = "Staple 3";
   const CustomDivider = () => {
     return <div className="divider" />;
