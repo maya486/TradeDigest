@@ -221,18 +221,24 @@ function App() {
       </>
     );
   };
-  const MTPanel = ({ code, quantity, id, lots }) => {
+  const MTPanel = ({ code, quantity, id, lots, isDelivered, date }) => {
     return (
       <>
         <div className="mt-panel-wrapper">
-          <p id="code">Item Code: {code}</p>
-          <p id="quantity">Qty: {quantity}</p>
-        </div>
-        <div className="mt-panel-wrapper">
-          <p id="id">Tracking ID: {id}</p>
-        </div>
-        <div className="mt-panel-wrapper">
-          <p id="lots">Material for Lots: {lots}</p>
+          <div className="mt-panel-names">
+            <p>Tracking ID: </p>
+            {isDelivered ? <p>Delivered On</p> : <p>Est. Delivery Date:</p>}
+            <p id="code">Item Code:</p>
+            <p id="quantity">Qty: {quantity}</p>
+            <p>For Lot: </p>
+          </div>
+          <div className="mt-panel-info">
+            <p>{id}</p>
+            <p>{date}</p>
+            <p>{code}</p>
+            <p>{quantity}</p>
+            <p>{lots}</p>
+          </div>
         </div>
       </>
     );
@@ -251,7 +257,14 @@ function App() {
       </AccordionPanel>
     );
   };
-  const CustomMTAccordionPanel = ({ code, quantity, id, lots }) => {
+  const CustomMTAccordionPanel = ({
+    code,
+    quantity,
+    id,
+    lots,
+    isDelivered,
+    date,
+  }) => {
     return (
       <AccordionPanel
         bg="#F2F0ED"
@@ -261,7 +274,14 @@ function App() {
           borderTop: "1px solid #DBDDE1",
         }}
       >
-        <MTPanel code={code} quantity={quantity} id={id} lots={lots} />
+        <MTPanel
+          code={code}
+          quantity={quantity}
+          id={id}
+          lots={lots}
+          isDelivered={isDelivered}
+          date={date}
+        />
       </AccordionPanel>
     );
   };
@@ -646,6 +666,8 @@ function App() {
                     quantity="2500"
                     id="524917889015W4"
                     lots="319, 331"
+                    isDelivered={true}
+                    date="07/07/2022"
                   />
                 </AccordionItem>
                 <AccordionItem>
@@ -658,6 +680,8 @@ function App() {
                     quantity="2500"
                     id="524917889015W4"
                     lots="319, 331"
+                    isDelivered={true}
+                    date="07/10/2022"
                   />
                 </AccordionItem>
               </Accordion>
@@ -674,7 +698,9 @@ function App() {
                     code="FM4505"
                     quantity="2500"
                     id="524917889015W4"
-                    lots="319, 331"
+                    lots="338, 312"
+                    isDelivered={false}
+                    date="07/23/2022"
                   />
                 </AccordionItem>
                 <AccordionItem>
@@ -687,12 +713,14 @@ function App() {
                     code="FM4505"
                     quantity="2500"
                     id="524917889015W4"
-                    lots="319, 331"
+                    lots="338, 312"
+                    isDelivered={false}
+                    date="08/02/2022"
                   />
                 </AccordionItem>
                 <AccordionItem>
                   <CustomMTAccordionButton
-                    date="June 7, 2022"
+                    date="Jul 19, 2022"
                     info="20d framing nails"
                     icon_type="delayed"
                   />
@@ -700,7 +728,9 @@ function App() {
                     code="FM4505"
                     quantity="2500"
                     id="524917889015W4"
-                    lots="319, 331"
+                    lots="338, 312"
+                    isDelivered={false}
+                    date="07/31/2022"
                   />
                 </AccordionItem>
               </Accordion>
