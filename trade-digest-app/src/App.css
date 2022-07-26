@@ -81,7 +81,7 @@
 
 .App {
   border: 1px solid black;
-  width: 429px;
+  width: 410px;
   /* width: 1000px; */
   height: 680px;
   margin: auto;
@@ -181,10 +181,12 @@
   margin: 8px 18px;
   background-color: #FBF9F6; 
 }
-/* #punch-item-button {
-  height:4px;
-  width:4px;
-} */
+
+.notifss {
+  max-height: 310px;
+  overflow:scroll;
+}
+
 #circle-progress {
   padding: 20px;
   color: #27364F;
@@ -315,7 +317,7 @@
 
 .start-letter-link {
   position: absolute;
-  left: 370px;
+  left: 360px;
 }
 
 .start-letter-wrapper {

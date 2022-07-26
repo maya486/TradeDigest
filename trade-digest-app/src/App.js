@@ -91,7 +91,7 @@ function App() {
           <p className="notif-details">{details}</p>
         </div>
         <LinkBox className="punch-item-link">
-          <LinkOverlay href={href} />
+          <LinkOverlay href={href} target="_blank" />
           {/* <div id="punch-item-button">[Icon]</div> */}
           <Icon as={FiExternalLink} w="23px" h="23px" />
         </LinkBox>
@@ -462,15 +462,15 @@ function App() {
           <Box className="punch-item-box" boxShadow={"lg"}>
             <PunchItem
               name="Master shower head in wrong..."
-              details="Jasper 1C | Lot 355"
-              href="#"
+              details="Jasper 1C | Lot 335"
+              href="https://mosaic.build/jasper-1c/335/61"
             />
           </Box>
           <Box className="punch-item-box" boxShadow={"lg"}>
             <PunchItem
               name="Portal framing straps in detail needs..."
               details="Jasper 1C | Lot 349"
-              href="#"
+              href="https://mosaic.build/jasper-1c/349/34"
             />
           </Box>
         </div>
@@ -503,7 +503,7 @@ function App() {
         </div>
         <ReportHeader text="Scope of Work" />
         <Tabs className="work-tabs" variant="line">
-          <TabList css={{ border: "1px solid #DCDFE2" }}>
+          <TabList css={{}}>
             <CustomTab text="Start Letter" />
             <CustomTab text="Work Orders" />
             <CustomTab text="VPOs" />
@@ -739,7 +739,13 @@ function App() {
         </Tabs>
         <ReportHeader text="Rewards" />
         <div className="rewards-wrapper">
-          <Icon as={BiGift} w={40} h={40} color="#27364F" padding="20px" />
+          <Icon
+            as={BiGift}
+            w={24}
+            h={24}
+            color="#27364F"
+            padding="20px 0 10px"
+          />
           <p id="rewards-description">
             EARN REWARDS
             <br /> by fulfilling punch items!
