@@ -103,7 +103,7 @@
 }
 
 #greeting {
-  margin: 16px 0 26px 16px;
+  margin: 16px 0 16px 16px;
   font-size: 28px;
   font-weight: bold;
   font-family:'mosaic_sharp_semi_slabSBd'
@@ -111,8 +111,12 @@
   /* font-family:'Mosaic Sharp Semi Slab' ; */
 }
 
+
+
 .notifs {
-  margin: 18px 18px 32px;
+  /* margin: 18px 18px 32px; */
+  margin: 0 18px;
+  padding: 0;
   background-color: white; 
   /* border-radius: 15px;  */
   /* box-shadow:black; */
@@ -120,12 +124,12 @@
 }
 
 #notif-header {
-  padding: 10px 32px;
-  background-color: #FBF9F6;
+  /* padding: 10px 32px; */
+  /* background-color: #FBF9F6; */
   /* border-radius: 15px 15px 0 0; */
-  color: #27364F;
-  font-weight:bold;
-  font-size: 20px;
+  color: #04203E;
+  font-weight:700;
+  font-size: 24px;
 }
 
 .notif-item {
@@ -156,16 +160,20 @@
   font-size: 14px;
 }
 
+.notif-time {
+  font-size: 11px;
+  color: #8D95A2;
+
+}
+
 #punch-item-button{
   font-size: 14px;
 }
 
-.report-header > .divider{
-  height: 2px;
-}
+
 .report-header-title {
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 24px;
   color: #04203E;
   font-weight: 700;
 }
@@ -200,7 +208,7 @@
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  top: 100px;
+  top: 90px;
   width: 100%;
   /* text-align: center; */
 
@@ -488,4 +496,37 @@
 .divider {
   background-color: #DBDDE1;
   height:1px;
+}
+
+.bigdivider {
+  background-color: #f6f6fa;
+  height: 6px;
+}
+/**
+ Copyright 2019 Itay Grudev
+ License: MIT
+ */
+:root {
+  --s: 14px;
+}
+ .ciclegraph {
+	position: relative;
+  width: 200px;
+  height: 200px;
+  margin: calc(var(--s) / 2 + 20px);
+}
+.ciclegraph .circleA, .circleB {
+	position: absolute;
+	top: 50%; left: 50%;
+  width: var(--s);
+  height: var(--s);
+  margin: calc( -14px / 2 );
+  border-radius: 50%;
+}
+.circleA{
+  /* color: "#FC1E68"; */
+  background-color: #FC1E68;
+}
+.circleB {
+  background-color: #EDEEF0;
 }

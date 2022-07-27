@@ -38,7 +38,19 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
-
+document.querySelectorAll(".ciclegraph").forEach((ciclegraph) => {
+  let circles = ciclegraph.querySelectorAll(".circleA, .circleB");
+  let angle = 360 - 90,
+    dangle = 360 / circles.length;
+  angle -= dangle;
+  for (let i = 0; i < circles.length; ++i) {
+    let circle = circles[i];
+    angle += dangle;
+    circle.style.transform = `rotate(${angle}deg) translate(${
+      ciclegraph.clientWidth / 2
+    }px) rotate(-${angle}deg)`;
+  }
+});
 function App() {
   const date = "Mon Jul 18, 2022";
   const name = "Staple 3";
@@ -47,6 +59,9 @@ function App() {
   };
   const Subdivider = () => {
     return <div className="subdivider" />;
+  };
+  const BigDivider = () => {
+    return <div className="bigdivider" />;
   };
   const CustomIcon = ({ type }) => {
     // eslint-disable-next-line default-case
@@ -70,7 +85,7 @@ function App() {
     }
     return <Icon as={TbCircleCheck} w="16px" h="16px" color="black" />;
   };
-  const NotifItem = ({ name, loc, details, icon_type }) => {
+  const NotifItem = ({ name, loc, details, icon_type, time }) => {
     return (
       <div className="notif-item">
         <CustomIcon type={icon_type} />
@@ -79,6 +94,7 @@ function App() {
           <p className="notif-loc">{loc}</p>
           <p className="notif-details">{details}</p>
         </div>
+        <p className="notif-time">{time}</p>
       </div>
     );
   };
@@ -101,9 +117,8 @@ function App() {
   const ReportHeader = ({ text }) => {
     return (
       <div className="report-header">
-        <CustomDivider />
+        <BigDivider />
         <p className="report-header-title">{text}</p>
-        <CustomDivider />
       </div>
     );
   };
@@ -423,32 +438,52 @@ function App() {
         </header>
         <CustomDivider />
         <p id="greeting">Hello, {name}!</p>
-        <Box className="notifs" boxShadow={"md"}>
-          <p id="notif-header">Notifications (2)</p>
+        <ReportHeader text="Notifications" />
+        <Box className="notifs">
           <CustomDivider />
           <NotifItem
             name="Work order has been updated"
-            loc="KER:442802 | Jasper 1C | Lot 331"
-            details="Work order update note"
+            loc="KER:00264 | Jasper 1C | Lot 72"
+            details="Added contract adjustment for 3/21/22 increase"
             icon_type="warning"
+            time="10h"
           />
           <CustomDivider />
           <NotifItem
             name="Work order has been approved"
-            loc="KER:442078 | Jasper 1C | Lot 331"
+            loc="KER:00262 | Jasper 1C | Lot 72"
             details="Approved by Cletus Caroland"
             icon_type="success"
+            time="7d"
+          />
+          <CustomDivider />
+          <NotifItem
+            name="Work order has been approved"
+            loc="KER:00263 | Jasper 1C | Lot 74"
+            details="Approved by Cletus Caroland"
+            icon_type="success"
+            time="7d"
           />
         </Box>
         <ReportHeader text="This Pay Period" />
+
         <div className="upp-wrapper">
-          <CircularProgress
+          <div class="ciclegraph">
+            {[...Array(10)].map((x, i) => (
+              <div class="circleA" key={i}></div>
+            ))}
+            {[...Array(4)].map((x, i) => (
+              <div class="circleB" key={i}></div>
+            ))}
+          </div>
+          {/* <div class="circleC" /> */}
+          {/* <CircularProgress
             id="circle-progress"
             size="240px"
             value={20}
             thickness="7px"
             color="#FC1E68"
-          />
+          /> */}
           <div className="inner-progress-text">
             <Text id="countdown-text">12 Days</Text>
             <Text id="countdown-helper">Until Next Pay Run</Text>
