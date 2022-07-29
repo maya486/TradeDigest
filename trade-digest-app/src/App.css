@@ -155,7 +155,7 @@
   color: #04203E;
   font-weight: bold;
 }
-.notif-loc, .notif-details{
+.notif-loc, .notif-details, .notif-id{
   color: #8A96A3;
   font-size: 14px;
 }
@@ -186,8 +186,8 @@
   position:relative;
 }
 .punch-item-box {
-  margin: 8px 18px;
-  background-color: #FBF9F6; 
+  margin: 0px 18px;
+  /* background-color: #FBF9F6;  */
 }
 
 .notifss {
@@ -225,11 +225,11 @@
   font-size: 12px;
 }
 
-.punch-items-text {
+.subsection {
   /* text-align:start; */
   color: #04203E;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
   padding-left:18px;
 }
 
@@ -241,51 +241,57 @@
 }
 
 .punch-items-wrapper {
-  padding: 10px 0 30px;
+  padding: 10px 0 20px;
+}
+
+.wo-accordion {
+  padding: 0 18px;
 }
 
 .work-tabs {
   background-color: #FBF9F6;
 }
 
-.tab {
-  color: #8D95A2;
+/* .tab {
   font-weight: 333;
   font-size: 6px;
-}
+} */
 .wov-tag {
-  position: absolute;
-  left: 130px;
+  height:50px;
 }
 .wov-button-wrapper {
   display: flex;
-  padding: 8px 0;
   width: 100%;
+  padding: 8px 0;
   align-items: center;
-  position: relative;
   color: #27364F;
 }
 .wov-button-loc {
-  /* padding: 0 0 0 50px; */
-  /* align-self: flex-end; */
-  position:absolute;
-  left: 240px;
+  font-size:14px;
+  font-weight: 350;
+  color: #8D95A2;
 }
 .wov-button-id {
-  /* padding: 0 50px 0 0; */
-  /* position: absolute */
+  font-size: 16px;
+  font-weight:700;
+  color: #3E4C63;
+}
+.wov-button-text-wrapper {
+  padding: 0 17px;
+  flex:1;
+  text-align: left;
 }
 .wov-panel-wrapper {
   display: flex;
   font-size: 14px;
-  color: #3E4C63;
-  font-weight:333;
-  /* border: 1px solid red; */
-  padding: 5px;
-  /* background-color: #F2F0ED; */
+  padding: 0 0 10px;
 }
-.wov-panel-names, .wov-panel-info {
+.wov-panel-names{
   font-weight: 700;
+  padding-right: 10px;
+}
+.wov-panel-info {
+  font-weight: 350;
 }
 .wov-panel-names > p, .wov-panel-info > p {
   padding: 3px 16px 0 0;
@@ -294,6 +300,11 @@
 .lineitem {
   font-weight: 333;
 }
+
+.material-wrapper {
+  margin: 15px 22px 0;
+  justify-content: center;
+} 
 
 .mt-panel-wrapper {
   color: #3E4C63;
@@ -323,41 +334,65 @@
   flex: 1;
 }
 
-.start-letter-link {
-  position: absolute;
-  left: 360px;
+.start-letter-plan-elevation {
+  color: #3E4C63;
+  font-weight: 350;
 }
 
+.start-letter-link {
+  color: #8D95A2;
+}
+.start-letter-text {
+  flex: 1;
+
+}
 .start-letter-wrapper {
-  background-color: #FBF9F6;
-  padding: 17px;
+  margin: 0 20px;
+  padding: 16px 0 16px 18px;
   display: flex;
   font-size: 14px;
   align-items: center;
   position: relative;
-  border-bottom: 1px solid #DBDDE1;
+  border-top: 1px solid #DBDDE1;
 }
-#start-letter-loc {
+.start-letter-loc {
   color: #3E4C63;
-  position: absolute;
+  font-weight: 700;
 }
 
-#start-letter-date {
+.start-letter-date {
+  font-weight: 350;
   color: #8D95A2;
-  position: absolute;
-  left: 180px;
-  /* flex: 1;
-  padding: 0 0 0 40px; */
 }
 
-.mt-button-date {
+.mt-button-wrapper {
+  position: relative;
+  align-items: center;
+  display: flex;
+  padding: 17px 0;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 350;
+}
+
+.mt-button-icon {
   /* padding: 0 30px; */
   position: absolute;
-  left: 50px;
 }
+
+.mt-button-type {
+  position: absolute;
+  left: 45px;
+}
+
 .mt-button-info {
   position: absolute;
-  left: 170px;
+  left: 150px;
+}
+
+.mt-button-dropdown {
+  position: absolute;
+  left: 330px;
 }
 
 .reward-item-wrapper {
@@ -430,7 +465,7 @@
 #schedule-wrapper {
   /* margin: 18px; */
   /* padding-top: 10px; */
-  padding: 20px 0px 10px 30px;
+  padding: 5px 0px 15px 30px;
   display: flex;
   flex-direction: row;
   /* height: 300px; */
@@ -439,9 +474,9 @@
 #timeline-line {
   width: 1px;
   background-color: #8D95A2;
-  height: calc(100% - 20px);
+  height: calc(100% - 30px);
   /* height: 100%; */
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
 }
 
 .timeline-wrapper {
@@ -454,6 +489,7 @@
   align-items: center;
   position:relative;
   right: 7px;
+  padding: 10px 0;
 }
 .timeline-bullet {
   padding: 7px;
@@ -467,8 +503,8 @@
 .timeline-node-text {
   padding-left: 17px;
   font-size: 14px;
-  font-weight: 350;
-  color: #27364F;
+  font-weight: 700;
+  color: #04203E;
 }
 
 .timeline-item-name {
@@ -488,6 +524,12 @@
   flex: 1;
 }
 
+.timeline-divider {
+  background-color: #DBDDE1;
+  height: 1px;
+  margin: 0 24px 0 25px;
+}
+
 .subdivider {
   background-color: #DBDDE1;
   height: 1px;
@@ -502,20 +544,16 @@
   background-color: #f6f6fa;
   height: 6px;
 }
-/**
- Copyright 2019 Itay Grudev
- License: MIT
- */
 :root {
   --s: 14px;
 }
- .ciclegraph {
+ .circlegraph {
 	position: relative;
   width: 200px;
   height: 200px;
   margin: calc(var(--s) / 2 + 20px);
 }
-.ciclegraph .circleA, .circleB {
+.circlegraph .circleA, .circleB {
 	position: absolute;
 	top: 50%; left: 50%;
   width: var(--s);
